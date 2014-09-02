@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>plg_system_cloak</name>
+	<author>Jasper van Rijbroek</author>
+	<creationDate>Juli 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>jasper@moyoweb.nl</authorEmail>
+	<authorUrl>www.moyoweb.nl</authorUrl>
+	<version>1.0.0</version>
+	<description>Email cloaking on the conten</description>
+
+	<files>
+		<filename plugin="cloak">cloak.php</filename>
+	</files>
+</extension>
