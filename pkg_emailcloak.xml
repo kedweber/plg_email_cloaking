@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+    <name>Email Cloak</name>
+    <author>Jasper van Rijbroek</author>
+    <creationDate>September 2014</creationDate>
+    <packagename>email-cloak</packagename>
+    <version>1.0.0</version>
+    <url>http://www.moyoweb.nl/</url>
+    <packager>Jasper van Rijbroek</packager>
+    <packagerurl>http://www.moyoweb.nl/</packagerurl>
+    <description>Email Cloak Package</description>
+    <files folder="packages">
+        <file type="plugin" id="cloak" group="system">plugins/cloak</file>
+    </files>
+</extension>

@@ -1,0 +1,17 @@
+{
+    "name": "cta/email-cloak",
+    "type": "joomlatools-installer",
+    "description": "Router Package",
+    "keywords": ["joomla", "router"],
+    "homepage": "https://github.com/cta-int/email-cloak",
+    "authors": [
+        {
+            "name": "Jasper van Rijbroek",
+            "email": "jasper@moyoweb.nl",
+            "homepage": "http://www.moyoweb.nl"
+        }
+    ],
+    "require": {
+        "joomlatools/installer": "*"
+    }
+}
