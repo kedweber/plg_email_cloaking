@@ -46,7 +46,6 @@ class PlgSystemCloak extends JPlugin
 
                 while (preg_match($this->params->regex, $body, $regs, PREG_OFFSET_CAPTURE))
                 {
-                    error_log(print_r($regs, 1));
                     $protected = $this->_protectEmail('', $regs[1][0]);
                     $body = substr_replace($body, $protected, $regs[1][1], strlen($regs[1][0]));
                 }
@@ -59,7 +58,12 @@ class PlgSystemCloak extends JPlugin
     private function _protectEmail($mailto, $text = '', $pre = '', $post = '')
     {
         $id = 'ep_' . substr(md5(rand()), 0, 8);
-        
+
+        if($mailto) {
+            $text = $this->_createSpans($mailto, $id);
+            return $this->createLink($text, $id, $pre, $post);
+        }
+
         if($text) {
             while (preg_match($this->params->regex, $text, $regs, PREG_OFFSET_CAPTURE))
             {
@@ -68,8 +72,12 @@ class PlgSystemCloak extends JPlugin
             }
         }
 
+        if ($id)
+        {
+            return self::_createOutput($text, $id);
+        }
 
-        return $this->createLink($text, $id, $pre, $post);
+        return $text;
     }
 
     private function _createSpans($str, $id = 0, $hide = 0) {
@@ -113,5 +121,11 @@ class PlgSystemCloak extends JPlugin
             . $text
             . '</a>'
             . '<script type="text/javascript">emailProtector.addCloakedMailto("' . $id . '", 1);</script>';
+    }
+
+    protected function _createOutput($text, $id)
+    {
+        return '<!--- ' . JText::_('EP_MESSAGE_PROTECTED') . ' --->' . $text
+        . '<script type="text/javascript">emailProtector.addCloakedMailto("' . $id . '", 0);</script>';
     }
 }
