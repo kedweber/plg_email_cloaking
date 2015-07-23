@@ -71,8 +71,8 @@ plug-in in the Joomla back-end CMS; *Administration* \> *Extension Manager* \> *
 The plugin runs on its own hooking into the `onAfterDispatch` to build up the client-side javascript that will obscure the email addresses 
 in both javascript, html, link contents. The obfuscation of the returned DOM to the client occurs in the `onAfterRender` function.
 
-Unlike the built-in [JHTML Class](http://docs.joomla.org/Screen.plugins.edit.15#Content_-_Email_Cloaking) there is no built in toggle like: 
+Unlike the built-in [JHTML Class](http://docs.joomla.org/Screen.plugins.edit.15#Content_-_Email_Cloaking) there is no built in toggle which can be placed in an extension to disable auto cloaking of email addresses on a pages like: 
 
-`\{emailcloak=off\}`
+`{emailcloak=off}`
 
 within this similar plugin for the Content Creation Kit \(CCK\) Environment.
