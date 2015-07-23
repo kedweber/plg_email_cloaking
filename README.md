@@ -2,7 +2,8 @@
 
 ## Introduction
 
-Email cloaking plugin that is compatible with Moyo's CCK. The CCK was developed by [Moyo Web Architects](http://moyoweb.nl).
+Email cloaking plugin that is compatible with Moyo's CCK. 
+The CCK was developed by [Moyo Web Architects](http://moyoweb.nl).
 
 Although this plugin works automatically, you may be interested in reading [Usage](#Usage) section below.
 
